@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Owen</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/f75d27aedd.js" crossorigin="anonymous"></script>  </head>
+  <body>
+<!--Header-->
+            <div id="header">
+                <div class="navbar">
+                    <nav>
+                        <img src="foto/OWEN-LOGO-removebg-preview.png" class="logo">
+                        <ul id="sidemenu">
+                            <li><a href="#header">Home</a></li>
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact Me</a></li>
+                            <i class="fas fa-sharp fa-solid fa-circle-xmark" onclick="closebar()"></i>
+                        </ul>
+                        <i class="fas fa-solid fa-bars" onclick="openbar()"></i>
+                    </nav>
+                        <div class="intro">
+                            <h1>Hey I'm <span>Albert</span>!</h1>
+                        </div>
+                    </div> 
+                </div>  
+<!--About-->
+                <div id="about">
+                    <div class="container">
+                        <div class="baris">
+                            <div class="aboutme-1">
+                                <img src="foto/ganteng.jpg">
+                            </div>
+                            <div class="aboutme-2">
+                                <h1 class="change">About Me</h1>
+                                <p>Hi! I'm Albert and I'm currently studying Finance and Business Analytics in Monash
+                                    University. I was born and raised in Surabaya. I am hardworking, diligent and passionate
+                                    in acquiring new skills and experiences.</p>
+                                <div class="titles">
+                                    <p class="links active-link" onclick="opentab('skills')">Skills</p>
+                                    <p class="links" onclick="opentab('experience')">Experience</p>
+                                    <p class="links" onclick="opentab('education')">Education</p>
+                                </div>
+                                <div class="contents active-tab" id="skills">
+                                    <ul>
+                                        <li><span>HTML/CSS</span><br>Designing website with unique layout and style.</li>
+                                        <li><span>Photography and Editing</span><br>Covering events of all sorts with the mastery of a DSLR camera.</li>
+                                    </ul>
+                                </div>
+                                <div class="contents" id="experience">
+                                    <ul>
+                                        <li><span>2023</span><br>(New) Responsive Web Design training from FreeCodeCamp.</li>
+                                        <li><span>2022</span><br>Floor staff at Dumpling Plus Chadstone.</li>
+                                        <li><span>2019-2020</span><br>Member of St Louis 1 Senior High School Journalistic Organization.</li>
+                                    </ul>
+                                </div>
+                                <div class="contents" id="education">
+                                    <ul>
+                                        <li><span>2022-Current</span><br>Monash University.</li>
+                                        <li><span>2021-2022</span><br>Jakarta International College.</li>
+                                        <li><span>2018-2021</span><br>St Louis 1 Surabaya Catholic High School.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+<!---Portfolio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="change">Portfolio</h1>
+        <div class="folio">
+            <div class="isi">
+                <img src="foto/work.jpg">
+                <div class="layer">
+                    <h2>Australia Energy Report</h2>
+                    <p>The visualization is created using HTML/CSS/JSON based on the topic of energy specifically 
+                        between 2010-2020 in Australia. The domain of the visualization is 
+                        the inflow-outflow of energy correlated to population change as well 
+                        as aspects of energy that is changing from non-renewable to renewable 
+                        over the past 10 years.</p>
+                        <a href="https://glosimp.github.io/assignment2/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----contact------- --->
+<div id="contact">
+    <div class="container">
+        <div class="baris">
+            <div class="contact-left">
+                <h1 class="change">Contact Me</h1>
+                <p><i class="fa-solid fa-phone"></i>+61452100761</p>
+                <p><i class="fa-solid fa-envelope"></i>arifinalbertt@gmail.com</p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/albert-owen-a-044047250/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/albert.owen.370"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/alberttowen?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+                    <a href="https://open.spotify.com/user/albertowen?si=df3d4ea1630d40a6"><i class="fab fa-spotify"></i></a>
+                </div>
+                <a href="foto/Owen's CV.pdf" download class="btn btn2">Download CV!</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Insert Name" required>
+                    <input type="email" name="Email" placeholder="Insert Email" required>
+                    <textarea name="Message" rows="5" placeholder="Leave A Message"></textarea>
+                    <button class="btn2" type="submit">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+        <script>
+            var tablinks = document.getElementsByClassName("links");
+            var tabcontents = document.getElementsByClassName("contents");
+            
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add('active-tab');
+            }
+        </script>
+        <script>
+
+            var sidemeu = document.getElementById("sidemenu");
+            
+            function openbar(){
+                 sidemeu.style.right="0";
+            }
+            function closebar(){
+                 sidemeu.style.right="-200px";
+            }
+
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzXiQuBRMZY9X3KRQYqKCkkvEMVqJwycIb9_iLTeugt0zHAW4y-i3Gqoy27jhqQP9Xbdw/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML ="Message sent!"
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                    })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+    </body>
+</html>
