@@ -276,6 +276,9 @@ nav .fas{
     .contact-left,.contact-right{
         flex-basis: 100%;
     }
+    .isi{
+        width: 100%;
+    }
 }
 #span{
     color: #61b752;
