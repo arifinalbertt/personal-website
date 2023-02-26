@@ -18,14 +18,14 @@ body{
     background-position: center;
     background-image: url(foto/owen.jpg);
 }
+.right{
+    text-align: right;
+}
 .image{
     width: 100%;
 }
 .container{
     padding: 25px 10%;
-}
-.logo{
-    width: 350px;
 }
 nav{
     display: flex;
@@ -40,7 +40,7 @@ nav > ul > li{
 nav > ul > li > a{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: auto;
     position: relative;
 }
 nav > ul > li > a::after{
@@ -66,7 +66,7 @@ nav > ul > li> a:hover::after {
 }
 .intro h1 {
     margin-top: 25px;
-    font-size: 60px;
+    font-size: 50px;
 }
 .red{
     color: #ff004f;
